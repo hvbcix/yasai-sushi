@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yasai Sushi Mosina – sushi na miejscu, na wynos i z dowozem</title>
+  <meta name="description" content="Yasai Sushi w Mosinie. Ręcznie robione sushi ze świeżych składników – na miejscu, na wynos i z dowozem. Zobacz menu i zamów telefonicznie.">
+  <meta name="theme-color" content="#0d0d0c">
+  <meta property="og:title" content="Yasai Sushi Mosina">
+  <meta property="og:description" content="Tradycja • Pasja • Smak. Ręcznie robione sushi w Mosinie.">
+  <meta property="og:type" content="restaurant">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Kaushan+Script&family=Noto+Serif+JP:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <script src="dane.js"></script>
+  <script src="main.js" defer></script>
+</head>
+<body>
+
+  <div class="announce" data-announce hidden>
+    <a class="announce__link" data-announce-link href="#praca">
+      <span class="announce__tag" data-announce-tag></span>
+      <span class="announce__text" data-announce-text></span>
+      <span class="announce__arrow" aria-hidden="true">→</span>
+    </a>
+    <button class="announce__close" type="button" aria-label="Zamknij">×</button>
+  </div>
+
+  <header class="header" data-header>
+    <div class="container header__inner">
+      <a href="#top" class="logo" aria-label="Yasai Sushi – strona główna">
+        <span class="logo__name">YASAI</span>
+        <span class="logo__sub">SUSHI</span>
+      </a>
+      <nav class="nav" data-nav>
+        <a href="#menu">Menu</a>
+        <a href="#o-nas">O nas</a>
+        <a href="#zamow">Zamów</a>
+        <a href="#praca" data-if-rekrutacja>Praca</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+      <a class="btn btn--gold btn--sm header__call" data-tel href="#">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>
+        <span data-tel-text></span>
+      </a>
+      <button class="burger" type="button" aria-label="Menu nawigacji" aria-expanded="false" data-burger><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <section class="hero">
+      <img class="leaf leaf--tl" src="assets/leaf.svg" alt="" aria-hidden="true">
+      <img class="leaf leaf--br" src="assets/leaf.svg" alt="" aria-hidden="true">
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="script hero__kicker">Nowe miejsce w Mosinie</p>
+          <h1 class="hero__title">Sushi robione<br><span class="brush">z pasją</span></h1>
+          <p class="hero__lead">Świeże ryby, chrupiące warzywa i ryż przygotowywany codziennie na miejscu. Zjedz u nas, odbierz po drodze do domu albo zamów z dowozem.</p>
+          <div class="hero__cta">
+            <a class="btn btn--gold" data-menu-link href="menu/menu.pdf" target="_blank" rel="noopener">Zobacz menu</a>
+            <a class="btn btn--ghost" data-tel href="#">Zadzwoń i zamów</a>
+          </div>
+          <p class="hero__status" data-status></p>
+        </div>
+        <div class="hero__art">
+          <span class="hero__kanji" aria-hidden="true">寿司</span>
+          <figure class="hero__photo">
+            <img src="assets/zdjecia/hero.jpg" alt="Uramaki z łososiem i awokado w sezamie, podane na drewnianej desce z imbirem" width="682" height="1024" fetchpriority="high">
+          </figure>
+        </div>
+      </div>
+      <p class="hero__motto">Tradycja <i>•</i> Pasja <i>•</i> Smak</p>
+    </section>
+
+    <section class="features">
+      <div class="container features__grid">
+        <div class="feature">
+          <svg class="feature__ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M6 24c8-10 22-12 32-4l4-4v16l-4-4C28 36 14 34 6 24z"/><circle cx="31" cy="22" r="1.6"/></svg>
+          <h3>Świeże składniki</h3>
+          <p>Ryby i warzywa od sprawdzonych dostawców, dostarczane kilka razy w tygodniu.</p>
+        </div>
+        <div class="feature">
+          <svg class="feature__ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M14 40V22M24 40V14M34 40V22"/><path d="M8 40h32"/><path d="M10 18c4-8 24-8 28 0"/></svg>
+          <h3>Ręcznie robione</h3>
+          <p>Każda rolka powstaje na zamówienie, na oczach gości – bez półproduktów.</p>
+        </div>
+        <div class="feature">
+          <svg class="feature__ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 40C12 32 8 20 24 8c16 12 12 24 0 32z"/><path d="M24 14v26"/></svg>
+          <h3>Dużo opcji vege</h3>
+          <p><em>Yasai</em> po japońsku znaczy „warzywa” – dlatego roślinne zestawy traktujemy na serio.</p>
+        </div>
+        <div class="feature">
+          <svg class="feature__ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M4 30h26V14H4zM30 20h8l6 6v4H30z"/><circle cx="12" cy="34" r="4"/><circle cx="36" cy="34" r="4"/></svg>
+          <h3>Dowóz i odbiór</h3>
+          <p data-dowoz>Dowozimy na terenie Mosiny i okolic.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section menu" id="menu">
+      <div class="container">
+        <p class="script section__kicker">Nasza karta</p>
+        <h2 class="section__title">Menu</h2>
+        <p class="section__lead">Karta zmienia się razem z sezonem i dostawami – dlatego zawsze aktualną wersję trzymamy w jednym pliku PDF.</p>
+
+        <div class="menu__grid">
+          <article class="dish"><span class="dish__jp">巻き</span><h3>Maki</h3><p>Klasyczne, cienkie rolki w nori</p></article>
+          <article class="dish"><span class="dish__jp">太巻き</span><h3>Futomaki</h3><p>Grube rolki z kilkoma składnikami</p></article>
+          <article class="dish"><span class="dish__jp">裏巻き</span><h3>Uramaki</h3><p>Ryż na zewnątrz, sezam, tobiko</p></article>
+          <article class="dish"><span class="dish__jp">握り</span><h3>Nigiri</h3><p>Ryż i plaster świeżej ryby</p></article>
+          <article class="dish"><span class="dish__jp">天ぷら</span><h3>Tempura</h3><p>Rolki i krewetki w chrupiącym cieście</p></article>
+          <article class="dish"><span class="dish__jp">セット</span><h3>Zestawy</h3><p>Dla dwojga, dla rodziny, na imprezę</p></article>
+        </div>
+
+        <div class="menu__card">
+          <div>
+            <h3>Aktualne menu z cenami</h3>
+            <p class="muted">Aktualizacja: <span data-menu-date></span></p>
+          </div>
+          <div class="menu__actions">
+            <a class="btn btn--gold" data-menu-link href="menu/menu.pdf" target="_blank" rel="noopener">Otwórz menu (PDF)</a>
+            <a class="btn btn--ghost" data-menu-link data-download href="menu/menu.pdf" download>Pobierz</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery" aria-label="Z naszej kuchni">
+      <div class="container">
+        <p class="script section__kicker">Z naszej kuchni</p>
+        <div class="gallery__grid">
+          <figure class="gallery__item gallery__item--tall"><img src="assets/zdjecia/galeria-1.jpg" alt="Zapiekane rolki z sosem unagi i sezamem" loading="lazy" width="682" height="1024"></figure>
+          <figure class="gallery__item gallery__item--wide"><img src="assets/zdjecia/galeria-2.jpg" alt="Opalane nigiri z łososiem i chrupiącą cebulką" loading="lazy" width="1024" height="682"></figure>
+          <figure class="gallery__item gallery__item--wide"><img src="assets/zdjecia/galeria-3.jpg" alt="Zestaw nigiri na drewnianej tacy" loading="lazy" width="1024" height="682"></figure>
+          <figure class="gallery__item gallery__item--tall"><img src="assets/zdjecia/galeria-4.jpg" alt="Autorskie rolki z tatarem z tuńczyka i mango" loading="lazy" width="682" height="1024"></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="o-nas">
+      <div class="container about__grid">
+        <div class="about__visual" aria-hidden="true">
+          <span class="about__word">野菜</span>
+          <span class="about__reading">ya · sai</span>
+          <span class="about__meaning">warzywa</span>
+        </div>
+        <div>
+          <p class="script section__kicker">O nas</p>
+          <h2 class="section__title">Japońska precyzja,<br>lokalne serce</h2>
+          <p>Yasai Sushi to nowe miejsce na kulinarnej mapie Mosiny. Chcieliśmy, żeby dobre sushi było tu na wyciągnięcie ręki – bez jeżdżenia do Poznania.</p>
+          <p>Stawiamy na proste zasady: świeży produkt, ryż doprawiany według tradycyjnej receptury i rolki składane na bieżąco. Obok klasyki znajdziesz u nas autorskie kompozycje i rozbudowaną część wegetariańską – w końcu nasza nazwa zobowiązuje.</p>
+          <ul class="about__list">
+            <li>Na miejscu, na wynos i z dowozem</li>
+            <li>Zestawy na imprezy i spotkania firmowe</li>
+            <li>Karta zmieniana sezonowo</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section order" id="zamow">
+      <div class="container">
+        <p class="script section__kicker">Głodny?</p>
+        <h2 class="section__title">Jak zamówić</h2>
+        <ol class="steps">
+          <li class="step"><span class="step__n">1</span><h3>Wybierz z menu</h3><p>Otwórz aktualną kartę w PDF – działa też na telefonie.</p></li>
+          <li class="step"><span class="step__n">2</span><h3>Zadzwoń</h3><p>Zadzwoń pod <a data-tel href="#"><span data-tel-text></span></a>. Przyjmiemy zamówienie i podamy czas realizacji.</p></li>
+          <li class="step"><span class="step__n">3</span><h3>Odbierz lub czekaj</h3><p>Odbierz osobiście albo poczekaj na dostawę pod drzwi.</p></li>
+        </ol>
+        <div class="order__cta">
+          <a class="btn btn--gold btn--lg" data-tel href="#">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>
+            <span data-tel-text></span>
+          </a>
+          <div class="order__apps" data-apps hidden>
+            <span class="muted">albo zamów online:</span>
+            <a class="chip" data-app="pyszne" target="_blank" rel="noopener">Pyszne.pl</a>
+            <a class="chip" data-app="glovo" target="_blank" rel="noopener">Glovo</a>
+            <a class="chip" data-app="wolt" target="_blank" rel="noopener">Wolt</a>
+            <a class="chip" data-app="wlasny" target="_blank" rel="noopener">Zamów online</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section jobs" id="praca" data-if-rekrutacja>
+      <div class="container jobs__grid">
+        <div>
+          <p class="script section__kicker">Dołącz do naszego zespołu!</p>
+          <h2 class="section__title"><span class="brush brush--dark">Sushi Master</span></h2>
+          <p class="section__lead">Szukamy pasjonata sushi, który chce tworzyć z nami wyjątkowe smaki.</p>
+          <ul class="jobs__list">
+            <li><strong>Doświadczenie</strong> w pracy z kuchnią sushi będzie dużym atutem, ale nie jest wymagane.</li>
+            <li><strong>Pasja</strong> do gotowania, precyzji i dobrej jakości produktów.</li>
+            <li><strong>Zaangażowanie</strong> i chęć rozwoju w naszym zespole.</li>
+            <li><strong>Atrakcyjne warunki</strong> pracy i możliwość rozwoju zawodowego.</li>
+          </ul>
+          <a class="btn btn--gold" data-tel href="#">Zadzwoń: <span data-tel-text></span></a>
+          <p class="muted small">Czekamy na Twoją wiadomość lub telefon.</p>
+        </div>
+        <img class="jobs__poster" src="assets/rekrutacja.jpg" alt="Plakat rekrutacyjny Yasai Sushi – Sushi Master" loading="lazy" width="658" height="935">
+      </div>
+    </section>
+
+    <section class="section contact" id="kontakt">
+      <div class="container contact__grid">
+        <div>
+          <p class="script section__kicker">Zapraszamy</p>
+          <h2 class="section__title">Kontakt i godziny</h2>
+          <address class="contact__address">
+            <strong data-name></strong><br>
+            <span data-street></span><br>
+            <span data-city></span>
+          </address>
+          <p><a class="contact__tel" data-tel href="#"><span data-tel-text></span></a></p>
+          <p data-email-wrap hidden><a data-email href="#"></a></p>
+          <table class="hours" data-hours></table>
+          <div class="socials" data-socials></div>
+        </div>
+        <div class="contact__map">
+          <iframe data-map title="Mapa dojazdu do Yasai Sushi" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <a class="btn btn--ghost btn--sm contact__route" data-route target="_blank" rel="noopener">Wyznacz trasę</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="logo logo--footer"><span class="logo__name">YASAI</span><span class="logo__sub">SUSHI</span></div>
+      <p class="footer__motto">Tradycja • Pasja • Smak</p>
+      <p class="muted small">© <span data-year></span> <span data-name></span>, <span data-city-only></span></p>
+    </div>
+  </footer>
+
+  <div class="mobilebar">
+    <a data-tel href="#">Zadzwoń</a>
+    <a data-menu-link href="menu/menu.pdf" target="_blank" rel="noopener">Menu</a>
+  </div>
+
+</body>
+</html>
