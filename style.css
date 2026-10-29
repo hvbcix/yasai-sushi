@@ -177,13 +177,14 @@ p { margin: 0 0 1em; }
 @keyframes pulse { 70% { box-shadow: 0 0 0 9px rgba(111, 207, 95, 0); } 100% { box-shadow: 0 0 0 0 rgba(111, 207, 95, 0); } }
 
 .hero__art { position: relative; display: grid; place-items: center; }
-.hero__photo {
-  margin: 0 -40px -60px 0;
-  width: min(600px, 115%);
-  -webkit-mask-image: radial-gradient(ellipse 58% 52% at 58% 56%, #000 55%, transparent 100%);
-  mask-image: radial-gradient(ellipse 58% 52% at 58% 56%, #000 55%, transparent 100%);
+.hero__maki { width: min(520px, 100%); animation: float 7s ease-in-out infinite; filter: drop-shadow(0 30px 40px rgba(0, 0, 0, .6)); }
+.hero__kanji {
+  position: absolute; right: 0; top: 50%; transform: translateY(-50%);
+  writing-mode: vertical-rl;
+  font-family: var(--jp); font-size: clamp(4rem, 9vw, 7.5rem); line-height: 1;
+  color: transparent; -webkit-text-stroke: 1px rgba(212, 166, 74, .35);
 }
-.hero__photo img { width: 100%; }
+@keyframes float { 50% { transform: translateY(-14px) rotate(1.5deg); } }
 .hero__motto {
   position: absolute; left: 0; right: 0; bottom: 26px; margin: 0;
   text-align: center; font-size: .78rem; letter-spacing: .5em; text-transform: uppercase; color: var(--muted);
@@ -357,8 +358,8 @@ p { margin: 0 0 1em; }
 
 @media (max-width: 960px) {
   .hero__inner, .about__grid, .jobs__grid, .contact__grid { grid-template-columns: 1fr; }
-  .hero__art { order: -1; max-width: 420px; margin: -40px auto -120px; }
-  .hero__photo { margin: 0; width: 100%; }
+  .hero__art { order: -1; max-width: 380px; margin: 0 auto -20px; }
+  .hero__kanji { display: none; }
   .hero { text-align: center; }
   .hero__kicker { transform-origin: center; }
   .hero__lead { margin-inline: auto; }
@@ -398,9 +399,7 @@ p { margin: 0 0 1em; }
   .hero__motto { letter-spacing: .3em; }
   .leaf--tl { width: 120px; left: -50px; }
   .hero { padding-top: 24px; }
-  .hero__art { max-width: 320px; margin: -20px auto -50px; }
-  .hero__photo { aspect-ratio: 1; }
-  .hero__photo img { height: 100%; object-fit: cover; object-position: 75% 68%; }
+  .hero__art { max-width: 280px; margin: -20px auto -60px; }
   .gallery__grid { grid-template-rows: 200px 160px 160px; gap: 10px; }
 
   body { padding-bottom: 64px; }
